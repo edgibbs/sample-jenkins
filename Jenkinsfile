@@ -1,14 +1,16 @@
 buildMaster()
 
 def buildMaster() {
-  try {
-    checkoutStage()
-    sayHelloStage()
-  } catch(Exception exception) {
-    currentBuild.result = "FAILURE"
-    throw exception
-  } finally {
-    cleanupStage()
+  node() {
+    try {
+      checkoutStage()
+        sayHelloStage()
+    } catch(Exception exception) {
+      currentBuild.result = "FAILURE"
+        throw exception
+    } finally {
+      cleanupStage()
+    }
   }
 }
 
