@@ -1,3 +1,5 @@
+buildMaster()
+
 def buildMaster() {
   try {
     checkoutStage()
