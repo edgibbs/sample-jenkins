@@ -22,12 +22,13 @@ def checkoutStage() {
 }
 
 def sayHelloStage() {
-  sh "echo 'Hello'"
+  stage('Hello') {
+    sh "echo 'Hello'"
+  }
 }
 
 def cleanupStage() {
   stage('Cleanup') {
-    sh "docker-compose down"
-      cleanWs()
+    cleanWs()
   }
 }
