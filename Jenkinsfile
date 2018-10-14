@@ -7,7 +7,7 @@ def buildMaster() {
       sayHelloStage()
     } catch(Exception exception) {
       currentBuild.result = "FAILURE"
-        throw exception
+      throw exception
     } finally {
       cleanupStage()
     }
