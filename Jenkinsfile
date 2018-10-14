@@ -4,7 +4,7 @@ def buildMaster() {
   node() {
     try {
       checkoutStage()
-        sayHelloStage()
+      sayHelloStage()
     } catch(Exception exception) {
       currentBuild.result = "FAILURE"
         throw exception
